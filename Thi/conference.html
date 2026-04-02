@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Conference Hub</title>
+  <link rel="stylesheet" href="stylecon.css">
+</head>
+<body>
+
+<header>
+  <h2>Conference dashboard</h2>
+  <input type="text" id="search" placeholder="Type to filter table...">
+</header>
+<div class="container">
+
+  <button class="add-btn" onclick="openForm()">+ Add new</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Conference name</th>
+        <th>Speakers</th>
+        <th>Email</th>
+        <th>Date</th>
+        <th>Location</th>
+      </tr>
+      <tr>
+        <td>Ai for Education Applications Symposium</td>
+        <td>Prof.James Walker</td>
+        <td>j.walker@university.edu</td>
+        <td>2026-04-12</td>
+        <td>Lecture Hall A1,Boston</td>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<div id="popup" class="popup">
+  <div class="form">
+    <span class="close" onclick="closeForm()">×</span>
+
+    <h3>Add new conference</h3>
+    <label>Conference name</label>
+    <input id="name" type="text" placeholder="Even title" maxlength="30">
+    <span class="error" id="nameErr"></span>
+    <label>Email</label>
+    <input id="email" type="email" placeholder="email@example.com">
+    <span class="error" id="emailErr"></span>
+    <label>Speakers</label>
+    <input id="speakers" type="text" placeholder="">
+    <span class="error" id="speakersErr"></span>
+    <div class="btn-group">
+      <button id="addBtn" onclick="add()">Lưu</button>
+    </div>
+  </div>
+</div>
+
+<script src="jsmau.js"></script>
+
+</body>
+</html>
+```
